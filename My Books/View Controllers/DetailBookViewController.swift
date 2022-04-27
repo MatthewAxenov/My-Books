@@ -11,7 +11,6 @@ class DetailBookViewController: UIViewController {
     
     var book: Book!
     
-    
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
