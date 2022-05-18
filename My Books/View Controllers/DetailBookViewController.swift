@@ -75,10 +75,12 @@ extension DetailBookViewController {
         let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyboardHeight = keyboardFrame.height
         self.view.frame.origin.y -= keyboardHeight / 2
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @objc func keyboardWillHide(notification: Notification) {
         self.view.frame.origin.y = 0
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     private func removeKeyboardNotification() {
